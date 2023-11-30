@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:background="@color/white">
+
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+       <TableLayout
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:stretchColumns="0">
+           <TableRow
+               android:background="@color/azul">
+               <TextView
+                   android:layout_width="match_parent"
+                   android:layout_height="wrap_content"
+                   android:text="ITSCH INFORMA"
+                   android:layout_marginStart="10dp"
+                   android:textSize="30dp"
+                   android:textStyle="bold"
+                   android:textColor="#E1D4F8"
+
+                   />
+
+               <Button
+                   android:id="@+id/btniniciarhome"
+                   android:layout_width="match_parent"
+                   android:layout_height="wrap_content"
+                   android:layout_gravity="center_vertical"
+                   android:backgroundTint="#131313"
+                   android:textColor="@color/white"
+                   android:text="Iniciar Seción"
+                   android:layout_marginEnd="8dp"
+                   app:cornerRadius="19dp" />
+           </TableRow>
+
+
+
+
+       </TableLayout>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textAlignment="center"
+            android:textSize="30dp"
+            android:layout_marginTop="5dp"
+            android:textStyle="bold"
+            android:text="Anuncios Generales"
+            />
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rvAnuncioprincipal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginBottom="20dp"
+
+            tools:listitem="@layout/card_anuncio"/>
+
+
+
+
+
+
+
+
+    </LinearLayout>
+
+
+
+
+
+
+
+</ScrollView>

@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Admin">
+   <TableLayout
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content"
+       android:background="#9A3A3939"
+       android:stretchColumns="1"
+      >
+
+      <TableRow>
+         <ImageButton
+             android:layout_marginTop="3dp"
+             android:id="@+id/btnmenu"
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:src="@drawable/opcion"
+             android:layout_marginStart="5dp"
+
+             android:background="@android:color/transparent"
+             />
+         <TextView></TextView>
+         <ImageButton
+             android:id="@+id/btnAgregar"
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:layout_marginEnd="5dp"
+             android:src="@drawable/add"
+             android:background="@android:color/transparent"
+             />
+
+
+      </TableRow>
+      <androidx.recyclerview.widget.RecyclerView
+          android:id="@+id/rvAnuncioprincipal"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:layout_marginTop="20dp"
+          android:layout_marginStart="20dp"
+          android:layout_marginEnd="20dp"
+          android:layout_marginBottom="20dp"
+          tools:listitem="@layout/card_anuncio"/>
+   </TableLayout>
+
+
+</LinearLayout>

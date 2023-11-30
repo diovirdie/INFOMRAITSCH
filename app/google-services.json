@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "535343368081",
+    "project_id": "infomraitsch",
+    "storage_bucket": "infomraitsch.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:535343368081:android:6edaf257b5797b985e3c30",
+        "android_client_info": {
+          "package_name": "com.example.infomraitsch"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCBSD3Kea8r4su9O4b3H5Sr6o4KeUwsmps"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
