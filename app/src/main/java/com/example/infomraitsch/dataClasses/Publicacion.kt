@@ -4,6 +4,7 @@ import android.os.Parcel
 import android.os.Parcelable
 
 data class Publicacion(
+    val iddocumento:String?,
     val carreras: String?,
     val relevancia: String?,
     val asunto:String?,
@@ -19,11 +20,13 @@ data class Publicacion(
         parcel.readString(),
         parcel.readString(),
         parcel.readString(),
+        parcel.readString(),
 
     ) {
     }
 
     override fun writeToParcel(parcel: Parcel, flags: Int) {
+        parcel.writeString(iddocumento)
         parcel.writeString(carreras)
         parcel.writeString(relevancia)
         parcel.writeString(asunto)

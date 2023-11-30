@@ -16,6 +16,9 @@
         android:theme="@style/Theme.INFOMRAITSCH"
         tools:targetApi="31">
         <activity
+            android:name=".UpdateAnuncio"
+            android:exported="false" />
+        <activity
             android:name=".informacionadministrador"
             android:exported="false" />
         <activity

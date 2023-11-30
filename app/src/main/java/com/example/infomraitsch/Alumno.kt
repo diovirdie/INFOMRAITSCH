@@ -105,9 +105,10 @@ class Alumno : AppCompatActivity() {
                 val publico = "${Anuncios.data.get("carreras")}"
 
                 if (publico == "general") {
-
+                    var documento=Anuncios.id
                     listaA_G.add(
                         Publicacion(
+                            "${documento}",
                             "${Anuncios.data.get("carreras")}",
                             "${Anuncios.data.get("relevancia")}",
                             "${Anuncios.data.get("asunto")}",
@@ -148,9 +149,11 @@ class Alumno : AppCompatActivity() {
 
 
                 if (parte2 == parte1) {
+                    var documento=Anuncios.id
 
                     listaA_G.add(
                         Publicacion(
+                            "${documento}",
                             "${Anuncios.data.get("carreras")}",
                             "${Anuncios.data.get("relevancia")}",
                             "${Anuncios.data.get("asunto")}",
@@ -192,9 +195,12 @@ class Alumno : AppCompatActivity() {
 
 
                 if (publico == "Alta") {
+                    var documento=Anuncios.id
+
 
                     listaA_G.add(
                         Publicacion(
+                            "${documento}",
                             "${Anuncios.data.get("carreras")}",
                             "${Anuncios.data.get("relevancia")}",
                             "${Anuncios.data.get("asunto")}",

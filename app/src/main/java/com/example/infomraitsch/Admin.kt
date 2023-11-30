@@ -61,8 +61,12 @@ class Admin : AppCompatActivity() {
         db.collection("Anuncios").get().addOnSuccessListener {
 
             for (Anuncios in it){
+                var documento=Anuncios.id
                     listaA_G.add(
+
                         Publicacion(
+
+                            "${documento}",
                             "${Anuncios.data.get("carreras")}",
                             "${Anuncios.data.get("relevancia")}",
                             "${Anuncios.data.get("asunto")}",
@@ -70,6 +74,7 @@ class Admin : AppCompatActivity() {
                             "${Anuncios.data.get("descripcion")}",
                             "${Anuncios.data.get("icono")}"
                         ))
+
 
 
             }

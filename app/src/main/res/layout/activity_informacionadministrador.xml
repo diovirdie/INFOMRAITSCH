@@ -10,9 +10,8 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical">
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"/>
+
+
 
 
         <TableLayout
@@ -33,7 +32,27 @@
                     android:layout_marginBottom="6dp"
                     />
                 <TextView></TextView>
-                <TextView></TextView>
+                <ImageButton
+                    android:id="@+id/btnupdate"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/actualizar"
+                    android:layout_marginTop="6dp"
+                    android:layout_marginBottom="6dp"
+                    android:background="@android:color/transparent"
+                    />
+                <ImageButton
+                    android:id="@+id/btneliminar"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/basura"
+                    android:layout_marginTop="6dp"
+                    android:layout_marginBottom="6dp"
+                    android:layout_marginStart="21.5dp"
+                    android:layout_marginEnd="10dp"
+                    android:background="@android:color/transparent"
+                    />
+
 
 
             </TableRow>

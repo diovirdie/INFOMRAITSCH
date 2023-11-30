@@ -8,8 +8,10 @@ import android.os.Bundle
 import android.widget.ImageButton
 import android.widget.ImageView
 import android.widget.TextView
+import android.widget.Toast
 import com.bumptech.glide.Glide
 import com.example.infomraitsch.dataClasses.Publicacion
+import com.google.firebase.firestore.FirebaseFirestore
 import com.google.firebase.storage.FirebaseStorage
 
 class informacionadministrador : AppCompatActivity() {
@@ -19,6 +21,8 @@ class informacionadministrador : AppCompatActivity() {
     private lateinit var imageproducto: ImageView
     private lateinit var descripcion: TextView
     private lateinit var btnregresardes: ImageButton
+    private lateinit var btneliminar:ImageView
+    private lateinit var btnactualizar:ImageView
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_informacionadministrador)
@@ -36,7 +40,8 @@ class informacionadministrador : AppCompatActivity() {
 
 
         //incia codigo del activity
-
+        btneliminar = findViewById(R.id.btneliminar)
+        btnactualizar = findViewById(R.id.btnupdate)
         icono = findViewById(R.id.iconoa)
         txtencabezado = findViewById(R.id.textoencabezadoan)
         txtasunto = findViewById(R.id.asunto)
@@ -62,6 +67,29 @@ class informacionadministrador : AppCompatActivity() {
                 .into(icono)
 
 
+        }
+        btnactualizar.setOnClickListener{
+            val intent = Intent(this,UpdateAnuncio::class.java)
+            startActivity(intent)
+        }
+        btneliminar.setOnClickListener{
+            val db = FirebaseFirestore.getInstance()
+            val usuariosCollection = db.collection("Anuncios")
+            val anuncio =intent.getParcelableExtra<Publicacion>("item")
+            if(anuncio!=null){
+                var id=anuncio.iddocumento
+                val documentoRef = usuariosCollection.document(id.toString())
+                documentoRef.delete()
+                    .addOnSuccessListener {
+                        Toast.makeText(this,"Anuncio Eliminado Exitosamente", Toast.LENGTH_SHORT).show()
+                        val intent = Intent(this, Admin::class.java)
+                        startActivity(intent)
+                    }
+                    .addOnFailureListener { e ->
+                        Toast.makeText(this,"Se produjo un error al tratar de elimnar el archivo porfavor intentelo nuevamente ", Toast.LENGTH_SHORT).show()
+                    }
+
+            }
         }
 
 

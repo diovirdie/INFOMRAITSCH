@@ -130,6 +130,7 @@ class crearAnuncio : AppCompatActivity() {
             if (sistemas == 1){
 
                 val publicacion = Publicacion(
+                    "",
                     "Sistemas",
                     "${relevancia.toString()}",
                     "${asun.editText!!.text.toString()}",
@@ -143,6 +144,7 @@ class crearAnuncio : AppCompatActivity() {
             if (mecatronica == 1){
 
                 val publicacion = Publicacion(
+                    "",
                     "mecatronica",
                     "${relevancia.toString()}",
                     "${asun.editText!!.text.toString()}",
@@ -157,6 +159,7 @@ class crearAnuncio : AppCompatActivity() {
             if (gestion == 1){
 
                 val publicacion = Publicacion(
+                    "",
                     "gestion",
                     "${relevancia.toString()}",
                     "${asun.editText!!.text.toString()}",
@@ -170,6 +173,7 @@ class crearAnuncio : AppCompatActivity() {
             if (industrial == 1){
 
                 val publicacion = Publicacion(
+                    "",
                     "industrial",
                     "${relevancia.toString()}",
                     "${asun.editText!!.text.toString()}",
@@ -183,6 +187,7 @@ class crearAnuncio : AppCompatActivity() {
             if (nano == 1){
 
                 val publicacion = Publicacion(
+                    "",
                     "nano",
                     "${relevancia.toString()}",
                     "${asun.editText!!.text.toString()}",
@@ -196,6 +201,7 @@ class crearAnuncio : AppCompatActivity() {
             if (tics == 1){
 
                 val publicacion = Publicacion(
+                    "",
                     "tics",
                     "${relevancia.toString()}",
                     "${asun.editText!!.text.toString()}",
@@ -209,6 +215,7 @@ class crearAnuncio : AppCompatActivity() {
             if (bioquimica == 1){
 
                 val publicacion = Publicacion(
+                    "",
                     "bioquimica",
                     "${relevancia.toString()}",
                     "${asun.editText!!.text.toString()}",
@@ -222,6 +229,7 @@ class crearAnuncio : AppCompatActivity() {
             if (general == 1){
 
                 val publicacion = Publicacion(
+                    "",
                     "general",
                     "${relevancia.toString()}",
                     "${asun.editText!!.text.toString()}",

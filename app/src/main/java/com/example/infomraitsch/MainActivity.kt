@@ -38,9 +38,10 @@ class MainActivity : AppCompatActivity() {
                 val publico="${Anuncios.data.get("carreras")}"
 
                 if (publico =="general"){
-
+                    var documento=Anuncios.id
                     listaA_G.add(
                         Publicacion(
+                            "${documento}",
                         "${Anuncios.data.get("carreras")}",
                         "${Anuncios.data.get("relevancia")}",
                         "${Anuncios.data.get("asunto")}",
