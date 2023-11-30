@@ -5,33 +5,68 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Alumno">
 
+    tools:context=".Alumno">
 
     <TableLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:stretchColumns="1"
+        android:stretchColumns="0"
+        android:orientation="vertical"
         >
+        <TableRow>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="Panel Alumno"
+                android:textSize="30dp"
+                android:textColor="#FFFFFF"
+                android:textAlignment="center"
+                android:background="#D5D3BA"
+                android:textStyle="bold"/>
+
+
+            <ImageButton
+                android:id="@+id/BTNSALIR"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="5dp"
+                android:layout_marginTop="3dp"
+                android:background="@color/white"
+
+                android:src="@drawable/out" />
+
+        </TableRow>
         <TextView
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:text="Informacion Sobre"
+            android:text="Informacion Sobre:"
             android:textSize="40dp"
             android:textColor="#FFFFFF"
             android:textAlignment="center"
-            android:textStyle="bold"
-            />
+            android:background="#D5D3BA"
+            android:textStyle="bold"/>
 
-        <TableRow>
 
-            <RadioGroup
+
+
+
+
+
+
+
+
+
+
+
+        <RadioGroup
                 android:id="@+id/rgrelevancia"
                 android:layout_width="399dp"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
                 android:orientation="horizontal"
-                android:textAlignment="center">
+                android:textAlignment="center"
+                android:background="#99979696">
 
                 <RadioButton
                     android:id="@+id/general"
@@ -42,7 +77,7 @@
                     android:checked="true"
 
                     android:text="General"
-                    android:textColor="#8E8D8D"
+                    android:textColor="#ECE6E6"
                     android:textSize="30dp"
                     android:textStyle="bold" />
 
@@ -72,11 +107,8 @@
             </RadioGroup>
 
 
-        </TableRow>
-        <FrameLayout
-            android:id="@+id/contenedor_fragmento"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"/>
+
+
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/rvAnuncioprincipal"
             android:layout_width="match_parent"

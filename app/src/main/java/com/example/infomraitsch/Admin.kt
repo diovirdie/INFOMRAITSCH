@@ -77,7 +77,7 @@ class Admin : AppCompatActivity() {
             recyAnnge.adapter =  adaptadorPu
             recyAnnge.layoutManager = LinearLayoutManager(this)
             adaptadorPu.onProductoClick= {
-                val intent = Intent(this,InfoAnuncio::class.java)
+                val intent = Intent(this,informacionadministrador::class.java)
 
                 ///con esto nos llevamos toda la informacion de producto seleccionado
                 intent.putExtra("item",it)

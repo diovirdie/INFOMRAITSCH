@@ -55,6 +55,13 @@ class MainActivity : AppCompatActivity() {
             adaptadorPu= AdaptadorAnuncio(listaA_G, this)
             recyAnnge.adapter =  adaptadorPu
             recyAnnge.layoutManager = LinearLayoutManager(this)
+            adaptadorPu.onProductoClick= {
+                val intent = Intent(this,infoanunciogeneral::class.java)
+
+                ///con esto nos llevamos toda la informacion de producto seleccionado
+                intent.putExtra("item",it)
+                startActivity(intent)
+            }
 
 
 

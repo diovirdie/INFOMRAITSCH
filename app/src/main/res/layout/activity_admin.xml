@@ -14,16 +14,16 @@
       >
 
       <TableRow>
+
          <ImageButton
-             android:layout_marginTop="3dp"
              android:id="@+id/btnmenu"
              android:layout_width="wrap_content"
              android:layout_height="wrap_content"
-             android:src="@drawable/opcion"
              android:layout_marginStart="5dp"
-
+             android:layout_marginTop="3dp"
              android:background="@android:color/transparent"
-             />
+
+             android:src="@drawable/opcion" />
          <TextView></TextView>
          <ImageButton
              android:id="@+id/btnAgregar"

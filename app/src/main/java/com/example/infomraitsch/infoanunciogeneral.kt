@@ -12,18 +12,16 @@ import com.bumptech.glide.Glide
 import com.example.infomraitsch.dataClasses.Publicacion
 import com.google.firebase.storage.FirebaseStorage
 
-class InfoAnuncio : AppCompatActivity() {
-    private lateinit var icono:ImageView
-    private lateinit var txtencabezado:TextView
-    private lateinit var txtasunto:TextView
-    private lateinit var imageproducto:ImageView
-    private lateinit var descripcion:TextView
-    private lateinit var btnregresardes:ImageButton
-
-
+class infoanunciogeneral : AppCompatActivity() {
+    private lateinit var icono: ImageView
+    private lateinit var txtencabezado: TextView
+    private lateinit var txtasunto: TextView
+    private lateinit var imageproducto: ImageView
+    private lateinit var descripcion: TextView
+    private lateinit var btnregresardes: ImageButton
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_info_anuncio)
+        setContentView(R.layout.activity_infoanunciogeneral)
         //codigo colorerar
         val gradientDrawable = GradientDrawable(
             GradientDrawable.Orientation.LEFT_RIGHT,  // Puedes ajustar la orientación del degradado
@@ -47,7 +45,7 @@ class InfoAnuncio : AppCompatActivity() {
         descripcion = findViewById(R.id.Descripcion)
         btnregresardes = findViewById(R.id.btnregresarinfo)
         btnregresardes.setOnClickListener {
-            val intent = Intent(this, Alumno::class.java)
+            val intent = Intent(this, MainActivity::class.java)
             startActivity(intent)
         }
         val anuncio =intent.getParcelableExtra<Publicacion>("item")
