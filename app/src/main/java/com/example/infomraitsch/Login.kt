@@ -107,6 +107,7 @@ class Login : AppCompatActivity() {
                                 if(parte1=="A" ){
                                     val intent = Intent(this,Admin::class.java)
                                     startActivity(intent)
+                                    super.onDestroy()
 
 
                                 }

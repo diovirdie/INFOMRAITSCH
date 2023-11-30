@@ -32,7 +32,7 @@ class Admin : AppCompatActivity() {
         setContentView(R.layout.activity_admin)
         botonmenu = findViewById(R.id.btnmenu)
         botonagregar = findViewById(R.id.btnAgregar)
-        listaA.clear()
+
 
         //codigo colorerar
         val gradientDrawable = GradientDrawable(
@@ -49,7 +49,7 @@ class Admin : AppCompatActivity() {
         botonagregar.setOnClickListener {
             val intent = Intent(this, crearAnuncio::class.java)
             startActivity(intent)
-
+            super.onDestroy()
         }
         botonmenu.setOnClickListener {
             showPopupMenu(it)

@@ -1,9 +1,64 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".RecuperrarPass">
+    tools:context=".RecuperrarPass"
+    android:orientation="vertical"
+    android:background="#BECCFB"
+    >
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Recuperar Contraseña"
+        android:textAlignment="center"
+        android:textSize="30dp"
+        android:layout_marginBottom="40dp"
+        android:textColor="@color/black"
+        android:textStyle="bold"/>
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    <com.google.android.material.textfield.TextInputLayout
+
+        android:id="@+id/email_recuperar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:hint="Correo Electronico"
+        app:boxStrokeColor="#E83030"
+        android:layout_gravity="center"
+        android:textColorHint="@color/black"
+        app:hintTextColor="@color/black"
+        >
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textEmailAddress"
+            android:textColorHint="@color/black"
+            android:textColor="@color/black"/>
+        <Button
+            android:id="@+id/btnRecuperarPass"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Recuperar Contraseña"
+            android:textAllCaps="true"
+            android:layout_marginTop="30dp"
+            android:backgroundTint="#73C6EC"/>
+        <Button
+            android:id="@+id/btnRegresar_Recuperar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Regresar"
+            android:textAllCaps="true"
+            android:layout_marginTop="30dp"
+            android:backgroundTint="#FF5722"/>
+
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+
+</LinearLayout>

@@ -15,6 +15,7 @@ import com.google.firebase.storage.ktx.storage
 
 class AdaptadorAnuncio  (private val items: List<Publicacion>, val activity: Activity) : RecyclerView.Adapter<AdaptadorAnuncio.ViewHolder>() {
 
+
     class ViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
         val textViewItem: TextView = itemView.findViewById(R.id.asunto)
         val descr: TextView = itemView.findViewById(R.id.textoencabezadoan)
@@ -27,6 +28,7 @@ class AdaptadorAnuncio  (private val items: List<Publicacion>, val activity: Act
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
         val view = LayoutInflater.from(parent.context).inflate(R.layout.card_anuncio, parent, false)
         return ViewHolder(view)
+
     }
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
@@ -45,4 +47,6 @@ class AdaptadorAnuncio  (private val items: List<Publicacion>, val activity: Act
     override fun getItemCount(): Int {
         return items.size
     }
+
+
 }

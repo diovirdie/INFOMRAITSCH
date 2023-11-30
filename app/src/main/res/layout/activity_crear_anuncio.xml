@@ -247,10 +247,10 @@
             android:id="@+id/imagen"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:scaleY="1"
-            android:scaleX="1"
-            android:layout_margin="14dp"
-            android:background="@color/black"/>
+            android:scaleY=".9"
+            android:scaleX=".9"
+
+          />
 
         <TextView
             android:layout_marginTop="5dp"
@@ -260,6 +260,7 @@
             android:textAlignment="center"
             android:textColor="#03A9F4"
             android:textSize="20dp"
+            android:layout_margin="0dp"
 
             />
         <EditText

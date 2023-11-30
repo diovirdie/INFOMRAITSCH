@@ -30,7 +30,7 @@ class MainActivity : AppCompatActivity() {
 
 
         recyAnnge = findViewById(R.id.rvAnuncioprincipal)
-        recyAnnge.clearOnScrollListeners()
+
         //comienza codigo de el llenado de recycler
         db.collection("Anuncios").get().addOnSuccessListener {
 
@@ -67,6 +67,7 @@ class MainActivity : AppCompatActivity() {
             val intent = Intent(this, Login::class.java)
             startActivity(intent)
         }
+
 
 
     }
