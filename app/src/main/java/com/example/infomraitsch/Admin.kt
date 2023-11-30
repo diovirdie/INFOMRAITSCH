@@ -32,6 +32,8 @@ class Admin : AppCompatActivity() {
         setContentView(R.layout.activity_admin)
         botonmenu = findViewById(R.id.btnmenu)
         botonagregar = findViewById(R.id.btnAgregar)
+        listaA.clear()
+        listaA_G.clear()
 
 
         //codigo colorerar
@@ -74,6 +76,13 @@ class Admin : AppCompatActivity() {
             adaptadorPu= AdaptadorAnuncio(listaA_G, this)
             recyAnnge.adapter =  adaptadorPu
             recyAnnge.layoutManager = LinearLayoutManager(this)
+            adaptadorPu.onProductoClick= {
+                val intent = Intent(this,InfoAnuncio::class.java)
+
+                ///con esto nos llevamos toda la informacion de producto seleccionado
+                intent.putExtra("item",it)
+                startActivity(intent)
+            }
 
 
 

@@ -10,23 +10,21 @@ import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import com.example.infomraitsch.R
 import com.example.infomraitsch.dataClasses.Publicacion
-import com.google.firebase.ktx.Firebase
-import com.google.firebase.storage.ktx.storage
 
-class AdaptadorAnuncio  (private val items: List<Publicacion>, val activity: Activity) : RecyclerView.Adapter<AdaptadorAnuncio.ViewHolder>() {
+class Adaptadoranuncioal (private val items: List<Publicacion>, val activity: Activity) : RecyclerView.Adapter<Adaptadoranuncioal.ViewHolder>() {
 
-    var onProductoClick:((Publicacion)->Unit)?=null
+
     class ViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
         val textViewItem: TextView = itemView.findViewById(R.id.asunto)
         val descr: TextView = itemView.findViewById(R.id.textoencabezadoan)
-        val imagen:ImageView = itemView.findViewById(R.id.imagenProducto)
-        val icono:ImageView = itemView.findViewById(R.id.iconoa)
+        val imagen: ImageView = itemView.findViewById(R.id.imagenProducto)
+        val icono: ImageView = itemView.findViewById(R.id.iconoa)
 
 
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
-        val view = LayoutInflater.from(parent.context).inflate(R.layout.card_anuncio, parent, false)
+        val view = LayoutInflater.from(parent.context).inflate(R.layout.fragalumno, parent, false)
         return ViewHolder(view)
 
     }
@@ -41,17 +39,14 @@ class AdaptadorAnuncio  (private val items: List<Publicacion>, val activity: Act
         Glide.with(holder.itemView.context)
             .load(item.icono)
             .into(holder.icono)
-        holder.itemView.setOnClickListener{
-            //con esto podemos interactuar con el producto
-            onProductoClick?.invoke(item)
-        }
-
 
     }
 
     override fun getItemCount(): Int {
         return items.size
+
     }
+
 
 
 }
