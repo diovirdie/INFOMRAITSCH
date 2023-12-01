@@ -13,7 +13,7 @@ import com.bumptech.glide.Glide
 import com.example.infomraitsch.dataClasses.Publicacion
 import com.google.firebase.firestore.FirebaseFirestore
 import com.google.firebase.storage.FirebaseStorage
-
+lateinit var infodatos:Publicacion
 class informacionadministrador : AppCompatActivity() {
     private lateinit var icono: ImageView
     private lateinit var txtencabezado: TextView
@@ -69,8 +69,25 @@ class informacionadministrador : AppCompatActivity() {
 
         }
         btnactualizar.setOnClickListener{
+            val anuncio =intent.getParcelableExtra<Publicacion>("item")
+            if(anuncio!=null){
+                infodatos= Publicacion(
+                    "${anuncio.iddocumento}",
+                    "${anuncio.carreras}",
+                    "${anuncio.relevancia}",
+                    "${anuncio.asunto}",
+                    "${anuncio.foto}",
+                    "${anuncio.descripcion}",
+                    "${anuncio.icono}"
+
+
+                )
+
+            }
             val intent = Intent(this,UpdateAnuncio::class.java)
             startActivity(intent)
+
+
         }
         btneliminar.setOnClickListener{
             val db = FirebaseFirestore.getInstance()
